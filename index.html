@@ -40,11 +40,13 @@
         let timespan = now - start;
         // WEEKS
         if (timespan / 604800000 >= 2) {
-          weeks.innerHTML = Math.floor(timespan / 604800000) + 'weeks ';
+          weeks.innerHTML = Math.floor(timespan / 604800000) + ' weeks ';
           timespan -= Math.floor(timespan / 604800000) * 604800000;
         } else if (timespan / 604800000 >= 1) {
-          weeks.innerHTML = Math.floor(timespan / 604800000) + 'week ';
+          weeks.innerHTML = Math.floor(timespan / 604800000) + ' week ';
           timespan -= Math.floor(timespan / 604800000) * 604800000;
+        } else {
+          weeks.innerHTML = 0 + ' weeks ';
         }
         // DAYS
         if (timespan / 86400000 >= 2) {
@@ -53,6 +55,8 @@
         } else if (timespan / 86400000 >= 1) {
           days.innerHTML = Math.floor(timespan / 86400000) + 'day ';
           timespan -= Math.floor(timespan / 86400000) * 86400000;
+        } else {
+          days.innerHTML = 0 + ' days ';
         }
         // HOURS
         if (timespan / 3600000 >= 2) {
@@ -61,6 +65,8 @@
         } else if (timespan / 3600000 >= 1) {
           hours.innerHTML = Math.floor(timespan / 3600000) + ' hour ';
           timespan -= Math.floor(timespan / 3600000) * 3600000;
+        } else {
+          hours.innerHTML = 0 + ' hours ';
         }
         // MINUTES
         if (timespan / 60000 >= 2) {
@@ -69,6 +75,8 @@
         } else if (timespan / 60000 >= 1) {
           minutes.innerHTML = Math.floor(timespan / 60000) + ' minute ';
           timespan -= Math.floor(timespan / 60000) * 60000;
+        } else {
+          minutes.innerHTML = 0 + ' minutes ';
         }
         // SECONDS
         if (timespan / 1000 >= 2) {
@@ -77,6 +85,8 @@
         } else if (timespan / 1000 >= 1) {
           seconds.innerHTML = Math.floor(timespan / 1000) + ' second ';
           timespan -= Math.floor(timespan / 1000) * 1000;
+        } else {
+          seconds.innerHTML = 0 + ' seconds ';
         }
       }
 
