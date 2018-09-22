@@ -50,10 +50,10 @@
         }
         // DAYS
         if (timespan / 86400000 >= 2) {
-          days.innerHTML = Math.floor(timespan / 86400000) + 'days ';
+          days.innerHTML = Math.floor(timespan / 86400000) + ' days ';
           timespan -= Math.floor(timespan / 86400000) * 86400000;
         } else if (timespan / 86400000 >= 1) {
-          days.innerHTML = Math.floor(timespan / 86400000) + 'day ';
+          days.innerHTML = Math.floor(timespan / 86400000) + ' day ';
           timespan -= Math.floor(timespan / 86400000) * 86400000;
         } else {
           days.innerHTML = '0 days ';
