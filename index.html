@@ -40,10 +40,10 @@
         let timespan = now - start;
         // WEEKS
         if (timespan / 604800000 >= 2) {
-          weeks.innerHTML = Math.floor(timespan / 604800000) + 'weeks ';
+          weeks.innerHTML = Math.floor(timespan / 604800000) + ' weeks ';
           timespan -= Math.floor(timespan / 604800000) * 604800000;
         } else if (timespan / 604800000 >= 1) {
-          weeks.innerHTML = Math.floor(timespan / 604800000) + 'week ';
+          weeks.innerHTML = Math.floor(timespan / 604800000) + ' week ';
           timespan -= Math.floor(timespan / 604800000) * 604800000;
         } else {
           weeks.innerHTML = '0 weeks ';
